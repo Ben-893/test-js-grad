@@ -4,5 +4,7 @@
 // Explain:
 
 module.exports = function createBase(integer) {
-  // TODO
+  return n => {
+    return n + integer;
+  };
 };
