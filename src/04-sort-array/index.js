@@ -11,5 +11,9 @@
 // Explain:
 
 module.exports = function sortArray(arr) {
-  // TODO
+  if (!Array.isArray(arr) || !arr.length) {
+    return [];
+  } else {
+    return arr.sort((a, b) => a - b);
+  }
 };
