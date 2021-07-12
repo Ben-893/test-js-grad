@@ -9,9 +9,12 @@
 
 // Average and worst case time complexity (Big-O) of my function is:
 // Explain:
+const check = require('check-types');
 
 module.exports = function sortArray(arr) {
-  if (!Array.isArray(arr) || !arr.length) {
+  if (arr.some(i => !check.integer(i))) {
+    throw new TypeError();
+  } else if (!Array.isArray(arr) || !arr.length) {
     return [];
   } else {
     return arr.sort((a, b) => a - b);
